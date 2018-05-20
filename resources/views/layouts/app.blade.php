@@ -36,7 +36,21 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        @can('products.index')
+                        <li>
+                            <a href="{{ route('products.index') }}">Productos</a>
+                        </li>
+                        @endcan
+                        @can('users.index')
+                        <li>
+                            <a href="{{ route('users.index') }}">Usuarios   </a>
+                        </li>
+                        @endcan
+                        @can('roles.index')
+                        <li>
+                            <a href="{{ route('roles.index') }}">Roles</a>
+                        </li>
+                        @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->
