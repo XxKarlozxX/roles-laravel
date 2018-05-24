@@ -40,8 +40,8 @@
                                 @can('products.edit')
                                 <a href="{{ route('products.edit', $product->id) }}"
                                 class="btn btn-small btn-default">
-                                    Editar
-                                </a>
+                                    Ver 
+                                    </a>
                                 @endcan
                                 </td>
                                 
@@ -52,12 +52,14 @@
                                     <button class="btn btn-sm btn-danger">
                                         Eliminar
                                     </button>
+                                {!! Form::close() !!}
                                 @endcan
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $products->render() }}
                 </div>
             </div>
         </div>
